@@ -1,0 +1,67 @@
+npm init -> to initialise the repo
+npm install -D parcel           //install bundler parcell ->  -D means dev dependency
+
+parcel '^2.0.5'     ^carat will install all major update    recomended
+parcel '~2.0.5'     ~tilde will install all major updates   not recomended -> big update = big changes = code failure
+
+package.json      -> keeps record of packages installed with approx versions
+package lock.json -> keeps record (locks) of the exact pakage version installed during dev
+
+node mudules folder has all the js code and packages required by packages we install 
+        -> to manage transitive package dependency      
+        -> package1 depends on package2 ->  package2 depends on 4 more packages ....etc
+
+.gitignore -> jo bhi prod/git pr nhi push karna ismein daalo push nhi hoga
+
+package.json and packagelock.json se node modules wapas aa jayega
+with command npm init
+git se koi bhi project download karo and do npm init , node modules will be created with all packages 
+
+to build the project with parcel use command -> npx parcel index.html(sourcefileName). 
+->o/p -> server running at http://localhost:1234
+         Built in 558ms
+
+         npm -> installation
+         npx -> execution
+
+since we can install react as a dependency with npm we generally dont prefer cdn link call to bring react into our project
+
+npm i react or npm install react
+npm i react-dom 
+
+now we no longer need the cdn links in index.html script tag - so we will comment it out
+
+now if we start our server we'll get error react is not defined in console(browser console) 
+kyuki abhi just react install kiya h use nhi kiya
+
+ab error ayega ki app.js ko html mein importkiya h as nrmal js failure so it doesn't allow import statements
+            <script src = "./App.js"></script>
+so we need to change it to module -> <script type = "module" src = "./App.js"></script>
+
+now we know parcell provide us with a lot of features like -
+        - hot reloading
+        - separate builds for dev and prod
+        - local live server
+        - caching
+        - image optimisation
+        - minification
+        - bundling
+        - tree shaking
+        - Diagonostic
+        - error handling
+
+dev build command -> npx parcel index.html
+
+prod build -> npx parcel build index.html
+for prod build remove entry point app.js from package.json/package-lock.json
+every build is there in dist folder
+
+package.json ke script section mein start and build add kar do
+now to run project -> npm run start or npm start
+
+
+
+
+
+
+

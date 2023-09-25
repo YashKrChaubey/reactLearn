@@ -1,0 +1,55 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    height: 65px;
+}
+
+.logoImg {
+    width: 100px;
+}
+
+.navBar {
+    padding: 0px 30px;
+}
+
+
+.navBar > ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0px 0px;
+}
+
+.navBar > ul >li {
+    padding: 10px;
+    margin: 10px;
+}
+
+.cartImg {
+    width: 50px;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resCard {
+    height: 250px;
+    width: 180px;
+    padding: 5px 5px;
+    margin: 5px 5px;
+}
+.resCard:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}
+.res-img {
+    height: 120px;
+    width: 100%;
+}
+
+.resCard>h3 ,h6 {
+    padding: 5px 5px;
+    margin: 0px 0px;
+}

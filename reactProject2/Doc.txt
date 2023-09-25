@@ -1,0 +1,42 @@
+project 2 notes
+
+# Elements in react
+
+        react elements are objects
+        const heading = React.createElement("h1",{id:"header"},"I am text inside the h1 tag");
+        here heading is an object
+
+        JSX is a convention to merge html and JS
+
+        We use JSX inside react , JSX is independent of react , we can work in react without jsx , jsx makes our life easier.
+        JSX is not HTML inside javaScript it is a whole different convention for writing html like syntax in JS.
+
+        JSX is not pure javaScript , browsers(JS engines) doesn't understand JSX 
+        but it is a valid js syntax to write
+        parcel transpiles our JSX code and converted so that Browsers and reactDOM can understand it.
+        parcel uses babel package to transpile JSX into valid JS so that reactDOM and browsers can understand.
+
+
+
+        jS engines(browsers) only understand ECMAScirpt (ES6,ES5 etc),
+
+# components in react
+        class based components                               //old way of writing code (nobody writes code this way)
+        function based components (functional components)    //new way 99% projects use this
+
+        functional components -> normal javascript function that returns some jsx element or react element.
+
+
+Component Composition
+        component inside component              -> <componentName/> or <componentName></componentName> 
+                                                or {componentName()} kyuki component is also a function (functional component) 
+        ReactElement inside component           -> {elementName}
+        JS inside component                     -> {JS code ....}
+
+Element Composition
+        ReactElement inside ReactElement        -> {elementName}
+        component inside ReactElement           -> <componentName/> or <componentName></componentName> 
+                                                or {componentName()} kyuki component is also a function (functional component)
+        JS inside ReactElement                  -> {JS code ....}
+
+
