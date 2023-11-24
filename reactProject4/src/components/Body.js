@@ -1,17 +1,25 @@
 import ResCard from  "./ResCard.js"
 //same directory components
 import resObj from  "../utils/mockData"
+import { useState } from "react";
 //other directory utils
 
 const Body = ()=>{
+    const [newResList,setNewResList] = useState(resObj);
+
     return(
         <div className="body">
             <div className="filter">
-                <button className = "filter-btn">Top rated restraunts</button>
+                <button className = "filter-btn" onClick={()=>{
+                    let filteredList = newResList.filter((res)=>res.info.avgRating > 4.2);
+                    setNewResList(filteredList);
+                }}>
+                    Top rated restraunts
+                </button>
             </div>
             <div className="cardsContainer">
                 {
-                    resObj.map((restaurant) => <ResCard key = {restaurant.info.id} resData = {restaurant}/>)
+                    newResList.map((restaurant) => <ResCard key = {restaurant.info.id} resData = {restaurant}/>)
                     //never use indexes as keys it is okay but not recommended
                     //unique id as key >>>>>> use idx as key >>> not putting keys
                         //resObj.map((restaurant,index) => <ResCard key = {index} resData = {restaurant}/>)
